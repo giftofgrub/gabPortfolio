@@ -1,8 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Strata by HTML5 UP",
-    author: "Hunter Chang",
-    description: "A Gatsby.js Starter based on Strata by HTML5 UP"
+    title: "Gabriel Atienza Personal Page",
+    author: "Gabriel Atienza",
+    description: "A Showcase of Gabriel Atienza's works",
+    spiel: `
+      As a self-taught developer with a background in analysis, 
+      I approach things logically and with attention to detail. 
+      My experience working with data has drawn me to build the interactions made possible by it. 
+      Outside of work, 
+      I enjoy being outdoors for camping, cooking and seeing wildlife.`
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { graphql } from "gatsby"
 
 import Layout from '../components/layout'
 // import Lightbox from 'react-images'
@@ -75,45 +76,32 @@ class HomeIndex extends React.Component {
     }
 
     render() {
-        const siteTitle = "Gatsby Starter - Strata"
-        const siteDescription = "Site description"
-
+        const { title, description, author, spiel } = this.props.data.site.siteMetadata
+        const authDesc = "( Analysis ) => { Development }"
         return (
             <Layout>
                 <Helmet>
-                        <title>{siteTitle}</title>
-                        <meta name="description" content={siteDescription} />
+                        <title>{title}</title>
+                        <meta name="description" content={description} />
                 </Helmet>
 
                 <div id="main">
 
                     <section id="one">
                         <header className="major">
-                            <h2>Free GatsbyJS Starter<br />
-                            Open-Source, Fast As Hell.</h2>
+                            <h2>{author}</h2>
+                            <p>{authDesc}</p>
                         </header>
                         <p>
-                            <br /><strong>Enhanced by AppSeed</strong> with FTP Deploy Script and Authentication (soon).
-                            <br />Since Gatsby is built on React you straight away got all the things we love about React, like composability, one-way binding, resuability and great environment.
+                          {spiel}
                         </p>
 
-                        <ul className="actions">
-                            <li><a rel="noopener noreferrer" target="_blank" href="https://github.com/rosoftdeveloper/starter-gatsbyjs-strata" className="button">Get Sources</a></li>
-                            <a rel="noopener noreferrer" target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=https://starter-gatsbyjs-strata.appseed.us">Check Speed</a>
-                        </ul>
-
-                         Where to go from here?<br />    
-                         Read more on our <a href="https://blog.appseed.us">blog</a>,{' '} 
-                         build your next <strong>Full-Stack App</strong> with <a href="https://appseed.us">AppSeed App Generator</a> or get more starters:{' '}
-                         <a href="https://starter-gatsbyjs-dimension.appseed.us/">Dimension</a>, {' '}  
-                         <a href="https://starter-gatsbyjs-emma.appseed.us/">Emma</a>, {' '}
-                         <a href="https://starter-gatsbyjs-material-kit.appseed.us/">Material Kit</a>, {' '}
-                         <a href="https://starter-gatsbyjs-jodie.appseed.us/">Jodie</a> 
+                        
 
                     </section>
 
                     <section id="two">
-                        <h2>Recent Work</h2>
+                        <h2>My Work</h2>
 
                         <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
                             src,
@@ -172,3 +160,16 @@ class HomeIndex extends React.Component {
 }
 
 export default HomeIndex
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        spiel
+      }
+    }
+  }
+`
