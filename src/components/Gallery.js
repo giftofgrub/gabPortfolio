@@ -52,11 +52,11 @@ class Gallery extends Component {
         this.gotoNext();
     }
     renderGallery () {
-        const { images } = this.props;
+        const { projects } = this.props;
 
-        if (!images) return;
+        if (!projects) return;
 
-        const gallery = images.map((obj, i) => {
+        const gallery = projects.map((obj, i) => {
             return (
                 <article className="6u 12u$(xsmall) work-item" key={i}>
                     <a
@@ -67,8 +67,14 @@ class Gallery extends Component {
                         <img src={obj.thumbnail} />
                     </a>
 
-                    <h3>{obj.caption}</h3>
+                    <h3>{obj.name}</h3>
                     <p>{obj.description}</p>
+                    <div className="inner margTop">
+                      <ul className="icons">
+                        <li title="View Code"><a href={obj.code} className="icon fa-github"><span className="label"></span></a></li>
+                        <li title="View Live Site"><a href={obj.live} className="icon fa-eye"><span className="label" title="View Live Site"></span></a></li>
+                      </ul>
+                    </div>
                 </article>
             );
         });
@@ -85,7 +91,7 @@ class Gallery extends Component {
                 {this.renderGallery()}
                 <Lightbox
                     currentImage={this.state.currentImage}
-                    images={this.props.images}
+                    images={this.props.projects}
                     isOpen={this.state.lightboxIsOpen}
                     onClickImage={this.handleClickImage}
                     onClickNext={this.gotoNext}
