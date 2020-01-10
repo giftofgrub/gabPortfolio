@@ -57,7 +57,7 @@ class HomeIndex extends React.Component {
 
     render() {
         const { title, description, author, spiel } = this.props.data.site.siteMetadata
-        const authDesc = "( Analysis ) => { Development }"
+        const authDesc = "Analysis & Development "
         return (
             <Layout>
                 <Helmet>
@@ -67,20 +67,9 @@ class HomeIndex extends React.Component {
 
                 <div id="main">
 
+                    
+
                     <section id="one">
-                        <header className="major">
-                            <h2>{author}</h2>
-                            <p>{authDesc}</p>
-                        </header>
-                        <p>
-                          {spiel}
-                        </p>
-
-                        
-
-                    </section>
-
-                    <section id="two">
                         <h2>My Work</h2>
                         <Gallery projects={PROJECTS.map(({ id, src, thumbnail, name, description, code, live }) => ({
                             src,
@@ -94,6 +83,18 @@ class HomeIndex extends React.Component {
                         {/* <ul className="actions">
                           <li><a href="#">Full Portfolio</a></li>
                         </ul> */}
+                    </section>
+
+                    <section id="two">
+                        <header className="major">
+                            <h2>About Me</h2>
+                        </header>
+                        <p>
+                          {spiel}
+                        </p>
+
+                        
+
                     </section>
 
                     <section id="three">
