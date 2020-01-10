@@ -63,16 +63,15 @@ class HomeIndex extends React.Component {
                 <Helmet>
                         <title>{title}</title>
                         <meta name="description" content={description} />
+                        <html lang="en"></html>
                 </Helmet>
 
                 <div id="main">
-
-                    
-
                     <section id="one">
                         <h2>My Work</h2>
-                        <Gallery projects={PROJECTS.map(({ id, src, thumbnail, name, description, code, live }) => ({
+                        <Gallery projects={PROJECTS.map(({ id, src, imgAlt, thumbnail, name, description, code, live }) => ({
                             src,
+                            imgAlt,
                             thumbnail,
                             name,
                             description,

@@ -11,22 +11,22 @@ import thumbRecipeep from './images/thumbs/recipeep.png'
 import thumbPalette from './images/thumbs/palette.png'
 
 const PROJECTS = [
-  { id: '1', src: fullPalette, thumbnail: thumbPalette, name: 'Palette Pal', 
+  { id: '1', src: fullPalette, imgAlt: "Image of Palettepick Project", thumbnail: thumbPalette, name: 'Palette Pal', 
     description: 'A Palette Making application created with React.',
     code: 'https://github.com/giftofgrub/paletteMaker',
     live: 'http://palettepick.herokuapp.com/'
   },
-  { id: '2', src: fullJobly, thumbnail: thumbJobly, name: 'Jobly', 
+  { id: '2', src: fullJobly, imgAlt: "Image of Jobly Project", thumbnail: thumbJobly, name: 'Jobly', 
     description: 'A Linkedin clone build with React, Express, PostgreSQL',
     code: 'https://github.com/giftofgrub/jobly',
     live: 'http://jobly-linkedin-clone.herokuapp.com/'
   },
-  { id: '3', src: fullWarbler, thumbnail: thumbWarbler, name: 'Warbler', 
+  { id: '3', src: fullWarbler, imgAlt: "Image of Warbler Project", thumbnail: thumbWarbler, name: 'Warbler', 
     description: 'A Twitter clone built with Jinja, Flask, SQLAlchemy',
     code: 'https://github.com/giftofgrub/warbler',
     live: 'http://warbler-twitter-clone.herokuapp.com/'
   },
-  { id: '4', src: fullRecipeep, thumbnail: thumbRecipeep, name: 'ReciPeep', 
+  { id: '4', src: fullRecipeep, imgAlt: "Image of Recipeep Project", thumbnail: thumbRecipeep, name: 'ReciPeep', 
     description: 'A recipe sharing application built with EJS, Express, MongoDB',
     code: 'http://github.com/giftofgrub/recipeapp',
     live: 'http://recipeepapp.herokuapp.com/'

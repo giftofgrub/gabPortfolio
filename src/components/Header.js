@@ -16,10 +16,11 @@ function Header() {
               {/* <a href="#" className="image avatar"><img src={avatar} alt="" /></a> */}
               <h1><strong>Gabriel Atienza</strong>
               { count ? (
-                <Typist avgTypingDelay={200} onTypingDone={() => setCount(0)}>
+                <Typist avgTypingDelay={100} onTypingDone={() => setCount(0)}>
                   <span>Business Analyst</span>
-                  <Typist.Backspace count={16} delay={200} />
+                  <Typist.Backspace count={16} delay={100} />
                   <span>Frontend Developer</span>
+                  <Typist.Backspace count={16} delay={100} />
                 </Typist>
               ) : ("")
               }
