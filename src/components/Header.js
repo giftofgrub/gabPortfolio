@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Typist from 'react-typist';
-import Footer from './Footer'
-import avatar from '../assets/images/avatar.png'
+import Footer from './Footer';
+import avatar from '../assets/images/avatar.png';
 
 function Header() {
   const [count, setCount] = useState(1);
@@ -14,7 +14,7 @@ function Header() {
       <header id="header">
           <div className="inner">
               {/* <a href="#" className="image avatar"><img src={avatar} alt="" /></a> */}
-              <h1><strong>Gabriel Atienza</strong>
+              <p className="name-logo">Gabriel Atienza</p>
               { count ? (
                 <Typist avgTypingDelay={100} onTypingDone={() => setCount(0)}>
                   <span>Business Analyst</span>
@@ -24,7 +24,7 @@ function Header() {
                 </Typist>
               ) : ("")
               }
-              </h1>
+              
           </div>
           <Footer />
       </header>
