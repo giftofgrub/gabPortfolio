@@ -1,5 +1,3 @@
-
-
 import fullPalette from './images/fulls/palette.gif'
 import fullJobly from './images/fulls/jobly.gif'
 import fullWarbler from './images/fulls/warbler.gif'
@@ -11,26 +9,46 @@ import thumbRecipeep from './images/thumbs/recipeep.png'
 import thumbPalette from './images/thumbs/palette.png'
 
 const PROJECTS = [
-  { id: '1', src: fullPalette, imgAlt: "Image of Palettepick Project", thumbnail: thumbPalette, name: 'Palette Pal', 
+  {
+    id: '2',
+    src: fullPalette,
+    imgAlt: 'Image of Palettepick Project',
+    thumbnail: thumbPalette,
+    name: 'Palette Pal',
     description: 'A Palette Making application created with React.',
     code: 'https://github.com/giftofgrub/paletteMaker',
-    live: 'http://palettepick.herokuapp.com/'
+    live: 'https://palettepal.netlify.app/',
   },
-  { id: '2', src: fullJobly, imgAlt: "Image of Jobly Project", thumbnail: thumbJobly, name: 'Jobly', 
+  {
+    id: '3',
+    src: fullJobly,
+    imgAlt: 'Image of Jobly Project',
+    thumbnail: thumbJobly,
+    name: 'Jobly',
     description: 'A Linkedin clone build with React, Express, PostgreSQL',
     code: 'https://github.com/giftofgrub/jobly',
-    live: 'http://jobly-linkedin-clone.herokuapp.com/'
   },
-  { id: '3', src: fullWarbler, imgAlt: "Image of Warbler Project", thumbnail: thumbWarbler, name: 'Warbler', 
+  {
+    id: '4',
+    src: fullWarbler,
+    imgAlt: 'Image of Warbler Project',
+    thumbnail: thumbWarbler,
+    name: 'Warbler',
     description: 'A Twitter clone built with Jinja, Flask, SQLAlchemy',
     code: 'https://github.com/giftofgrub/warbler',
-    live: 'http://warbler-twitter-clone.herokuapp.com/'
+    live: 'http://warbler-twitter-clone.herokuapp.com/',
   },
-  { id: '4', src: fullRecipeep, imgAlt: "Image of Recipeep Project", thumbnail: thumbRecipeep, name: 'ReciPeep', 
-    description: 'A recipe sharing application built with EJS, Express, MongoDB',
+  {
+    id: '5',
+    src: fullRecipeep,
+    imgAlt: 'Image of Recipeep Project',
+    thumbnail: thumbRecipeep,
+    name: 'ReciPeep',
+    description:
+      'A recipe sharing application built with EJS, Express, MongoDB',
     code: 'http://github.com/giftofgrub/recipeapp',
-    live: 'http://recipeepapp.herokuapp.com/'
-  }
+    live: 'http://recipeepapp.herokuapp.com/',
+  },
 ]
 
 export default PROJECTS
