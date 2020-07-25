@@ -2,13 +2,25 @@ import fullPalette from './images/fulls/palette.gif'
 import fullJobly from './images/fulls/jobly.gif'
 import fullWarbler from './images/fulls/warbler.gif'
 import fullRecipeep from './images/fulls/recipeep.gif'
+import fullChefsMenu from './images/fulls/chefsMenu.gif'
 
 import thumbJobly from './images/thumbs/jobly.png'
 import thumbWarbler from './images/thumbs/warbler.png'
 import thumbRecipeep from './images/thumbs/recipeep.png'
 import thumbPalette from './images/thumbs/palette.png'
+import thumbChefsMenu from './images/thumbs/chefsMenu.png'
 
 const PROJECTS = [
+  {
+    id: '1',
+    src: fullChefsMenu,
+    imgAlt: "Image of Chef's Menu Project",
+    thumbnail: thumbChefsMenu,
+    name: "Chef's Menu",
+    description: 'A full-stack application for booking Chefs',
+    code: 'https://github.com/giftofgrub/paletteMaker',
+    live: 'https://palettepal.netlify.app/',
+  },
   {
     id: '2',
     src: fullPalette,
